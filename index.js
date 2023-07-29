@@ -70,16 +70,6 @@ function renderListView(data) {
   listViewContainer.classList.add("list-view-container");
 
 
-  const headerRow = document.createElement("tr");
-  headerRow.innerHTML = `
-    <th>Cryptocurrency</th>
-    <th>Current Price</th>
-    <th>Market Cap</th>
-    <th>24h Change</th>
-  `;
-  listViewContainer.appendChild(headerRow);
-
-
   data.forEach((crypto) => {
     const row = document.createElement("tr");
 

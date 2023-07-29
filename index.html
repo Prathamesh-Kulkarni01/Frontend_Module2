@@ -3,15 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cryptocurrency Market Data</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./index.css" />
   </head>
 
   <body>
     <header>
-      <h1>Cryptocurrency Market Data Visualization</h1>
+    
       <nav>
+        <div class="top_menu">
+          <p>
+  Logo
+          </p>
+          <ul>
+            <li>
+              Home
+            </li>
+            <li>
+              Compare
+            </li>
+            <li>
+              Watchlist
+            </li>
+            <li>
+              Dashboard
+            </li>
+          </ul>
+        </div>
         <ul>
           <li id="gridViewTab" class="active">Grid View</li>
           <li id="listViewTab">List View</li>
@@ -20,8 +38,6 @@
     </header>
     <main>
       <div id="cryptoDataContainer" class="grid-view">
-        <!-- The fetched cryptocurrency data will be displayed here -->
-      </div>
     </main>
     <script src="./index.js"></script>
   </body>
