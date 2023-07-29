@@ -1,24 +1,28 @@
-<!-- @format -->
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Cryptocurrency Market Data</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./index.css" />
   </head>
-  <body>
-    <button onclick="PrintDeveloperbyMap()">
-      Console log Students with Map
-    </button>
-    <button onclick="PrintDeveloperbyForEach()">
-      Console log Students with foreach
-    </button>
-    <button onclick="addData()">Console New Data with 4th Employee</button>
-    <button onclick="removeAdmin()">Remove Admin/button>
-    <button onclick="concatenateArray()">concatenateArray</button>
 
-    <script src="./script.js"></script>
+  <body>
+    <header>
+      <h1>Cryptocurrency Market Data Visualization</h1>
+      <nav>
+        <ul>
+          <li id="gridViewTab" class="active">Grid View</li>
+          <li id="listViewTab">List View</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="cryptoDataContainer" class="grid-view">
+        <!-- The fetched cryptocurrency data will be displayed here -->
+      </div>
+    </main>
+    <script src="./index.js"></script>
   </body>
 </html>
