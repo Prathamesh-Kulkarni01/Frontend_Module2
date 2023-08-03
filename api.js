@@ -35,7 +35,7 @@ const getChannelIcon=(video_data,card)=>{
 }
 
 const makeVideoCard=(data,card)=>{
-    console.log(data)
+    console.log("dddddd1112222233",data)
     videoCardContainer.innerHTML+=`
 <div class="video">
 <a href='/video.html?${data.id}'>
@@ -67,7 +67,7 @@ const search=()=>{
         q:input.value,
         regionCode:'IN'
     })).then(res=>res.json()).then(data=>{
-        // console.log("d",data)
+        console.log("dddddd111",data)
         data.items.forEach(item=>{
             getChannelIcon(item)
         })

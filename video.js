@@ -50,6 +50,7 @@ fetch(VIDEO_HTTP+new URLSearchParams({
     regionCode:'IN'
 })).then(res=>res.json()).then(data=>{
     // console.log("d",data)
+    console.log("data11111",data)
     data.items.forEach(item=>{
         getChannelIcon(item,videoCardContainer)
     })
@@ -66,12 +67,15 @@ const getChannelIcon=(video_data,card)=>{
         // console.log("d",data)
         video_data.channelThumbnail=data.items[0].snippet.thumbnails.default.url
         console.log({video_data})
+        console.log("data111222",data)
         makeVideoCard(video_data,card)
     })
 }
 
 const makeVideoCard=(data,card)=>{
-    console.log(data)
+
+    
+    console.log("data11111111111111222",data)
     videoCardContainer.innerHTML+=`
 <div class="video">
 <a href='/video.html?${data.id}'>
@@ -96,7 +100,6 @@ const makeVideoCard=(data,card)=>{
 const search=()=>{
     let input=document.querySelector(".search_bar")
     videoCardContainer.innerHTML=""
-    alert(input.value)
     fetch(`https://www.googleapis.com/youtube/v3/search?`+new URLSearchParams({
         key:YOUTUBE_API,
         part:'snippet',
@@ -105,7 +108,7 @@ const search=()=>{
         q:input.value,
         regionCode:'IN'
     })).then(res=>res.json()).then(data=>{
-        // console.log("d",data)
+        console.log("data111",data)
         data.items.forEach(item=>{
             getChannelIcon(item)
         })
