@@ -1,44 +1,197 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./index.css" />
-  </head>
+    <link rel="stylesheet" href="./css/styles.css" />
 
-  <body>
-    <header>
-    
-      <nav>
-        <div class="top_menu">
-          <p>
-  Logo
-          </p>
-          <ul>
-            <li>
-              Home
-            </li>
-            <li>
-              Compare
-            </li>
-            <li>
-              Watchlist
-            </li>
-            <li>
-              Dashboard
-            </li>
-          </ul>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
+        integrity="sha512-9YHSK59/rjvhtDcY/b+4rdnl0V4LPDWdkKceBl8ZLF5TB6745ml1AfluEU6dFWqwDw9lPvnauxFgpKvJqp7jiQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+        integrity="sha512-yDUXOUWwbHH4ggxueDnC5vJv4tmfySpVdIcN1LksGZi8W8EVZv4uKGrQc0pVf66zS7LDhFJM7Zdeow1sw1/8Jw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+        integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+
+<title>Youtube Clone</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_container">
+            <div>
+                <div class="toggle" id="toggle" style="margin-bottom: -1px;" onclick="showNav()">
+                    <i class="fa-solid fa-bars" style="margin: 10px;"></i>
+                    <img src="./Image/Youtube-Logo.png" alt="profile" />
+                </div>
+            </div>
+            <div class="search">
+                <input type="text" class="search_bar" placeholder="Search" />
+                <i class="bi bi-search search_btn" onclick="search()" ></i>
+            </div>
+
+            <div class="user">
+                <i class="fa-solid fa-video"></i>
+                <i class="fa-solid fa-search"></i>
+                <i class="fa-solid fa-bell"></i>
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                    alt="profile" />
+            </div>
         </div>
-        <ul>
-          <li id="gridViewTab" class="active">Grid View</li>
-          <li id="listViewTab">List View</li>
-        </ul>
-      </nav>
     </header>
+
+    <section class="nav" id="navbar">
+        <nav class="nav_container">
+            <div>
+                <a href="#" class="nav_logo">
+                    <div class="toggle" id="toggle" onclick="showNav()">
+                        <i class="fa-solid fa-bars"></i>
+                        <img src="./Image/Youtube-Logo.png" alt="profile" />
+                    </div>
+                </a>
+                <div class="nav_list">
+                    <div class="nav_items navtop">
+
+
+                        <a href="#" class="nav_link navtop active">
+                            <i class="fa fa-house nav_icon"></i>
+                            <span class="nav_name">Home</span>
+                        </a>
+
+                        <a href="#" class="nav_link navtop">
+                            <i class="fa fa-compass nav_icon"></i>
+                            <span class="nav_name">Explore</span>
+                        </a>
+                        <a href="#" class="nav_link navtop">
+                            <i class="fa-brands fa-tiktok nav_icon"></i>
+                            <span class="nav_name">Short Video</span>
+                        </a>
+                        <a href="#" class="nav_link navtop">
+                            <i class="fa fa-house nav_icon"></i>
+                            <span class="nav_name">Home</span>
+                        </a> <a href="#" class="nav_link navtop">
+                            <i class="fa fa-house nav_icon"></i>
+                            <span class="nav_name">Home</span>
+                        </a>
+                        </a> <a href="#" class="nav_link navtop">
+                            <i class="fa fa-users nav_icon"></i>
+                            <span class="nav_name">Channel</span>
+                        </a>
+                        <a href="#" class="nav_link navtop">
+                            <i class="fa fa-video nav_icon"></i>
+                            <span class="nav_name">Library</span>
+                        </a>
+                        <a href="#" class="nav_link navtop">
+                            <i class="fa fa-clock-rotate-left nav_icon"></i>
+                            <span class="nav_name">Histry</span>
+                        </a>
+                        <a href="#" class="nav_link navtop">
+                            <i class="fa fa-thumbs-up nav_icon"></i>
+                            <span class="nav_name">Likes</span>
+                        </a>
+                        <div class="nav_dropdown">
+                            <a href="#" class="nav_link">
+                                <i class="fa-solid fa-chevron-up nav_dropdown-icon nav_icon"></i>
+                                <span class="nav_name">Show More</span>
+                            </a>
+                            <div class="nav_dropdown_collapse">
+                                <div class="nav_dropdown_content">
+                                    <a href="#" class="nav_dropdown_item">Grid Box</a>
+                                    <a href="#" class="nav_dropdown_item">Grid Box</a>
+                                    <a href="#" class="nav_dropdown_item">Grid Box</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="nav_link navtop">
+                            <i class="fa fa-comment nav_icon"></i>
+                            <span class="nav_name">Messages</span>
+                        </a>
+                    </div>
+                    <div class="navitems subscribe_container">
+                        <h3 class="nav_subtitle">SUBSCRIPTIONS</h3>
+
+                        <a href="#" class="nav_link">
+                            <img class="subscribe"
+                                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                                alt="profile" />
+                            <span class="nav_name">James Gomes</span>
+                        </a>
+                        <a href="#" class="nav_link">
+                            <img class="subscribe"
+                                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                                alt="profile" />
+                            <span class="nav_name">James Gomes</span>
+                        </a>
+                        <a href="#" class="nav_link">
+                            <img class="subscribe"
+                                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                                alt="profile" />
+                            <span class="nav_name">James Gomes</span>
+                        </a>
+                        <a href="#" class="nav_link">
+                            <img class="subscribe"
+                                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                                alt="profile" />
+                            <span class="nav_name">James Gomes</span>
+                        </a>
+                        <a href="#" class="nav_link">
+                            <img class="subscribe"
+                                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                                alt="profile" />
+                            <span class="nav_name">James Gomes</span>
+                        </a>
+                    </div>
+                    <div class="nav_dropdown">
+                        <a href="#" class="nav_link">
+                            <i class="fa-solid fa-chevron-up nav_dropdown-icon nav_icon"></i>
+                            <span class="nav_name">Show 13 More</span>
+                        </a>
+                        <div class="nav_dropdown_collapse">
+
+                        </div>
+                    </div>
+                </div>
+        </nav>
+
+    </section>
+
     <main>
-      <div id="cryptoDataContainer" class="grid-view">
+        <!-- Filter -->
+        <div class="filters">
+            <button class="filter-options active">All</button>
+            <button class="filter-options">New</button>
+            <button class="filter-options">Frontend</button>
+            <button class="filter-options">Trending</button>
+            <button class="filter-options">Songs</button>
+            <button class="filter-options">Movies</button>
+            <button class="filter-options">Sports</button>
+            <button class="filter-options">Games</button>
+            <button class="filter-options">Mobile</button>
+            <button class="filter-options">Space</button>
+            <button class="filter-options">Job</button>
+            <button class="filter-options">Sales</button>
+            <button class="filter-options">Old</button>
+
+        </div>
+        <section class="video_container grid">
+           
+
+        </section>
     </main>
+
     <script src="./index.js"></script>
-  </body>
+    <script src="./api.js"></script>
+
+</body>
+
 </html>

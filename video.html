@@ -1,0 +1,85 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
+        integrity="sha512-9YHSK59/rjvhtDcY/b+4rdnl0V4LPDWdkKceBl8ZLF5TB6745ml1AfluEU6dFWqwDw9lPvnauxFgpKvJqp7jiQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+        integrity="sha512-yDUXOUWwbHH4ggxueDnC5vJv4tmfySpVdIcN1LksGZi8W8EVZv4uKGrQc0pVf66zS7LDhFJM7Zdeow1sw1/8Jw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+        integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header_container">
+            <div>
+                <div class="toggle" id="toggle" style="margin-bottom: -1px;" onclick="showNav()">
+                    <i class="fa-solid fa-bars" style="margin: 10px;"></i>
+                    <img src="./Image/Youtube-Logo.png" alt="profile" />
+                </div>
+            </div>
+            <div class="search">
+                <input type="text" class="search_bar" placeholder="Search" />
+                <i class="bi bi-search search_btn" onclick="search()"></i>
+            </div>
+
+            <div class="user">
+                <i class="fa-solid fa-video"></i>
+                <i class="fa-solid fa-search"></i>
+                <i class="fa-solid fa-bell"></i>
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                    alt="profile" />
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="play-vid">
+                <!-- <iframe id="youtube-iframe" width="1280" height="720" src="https://www.youtube.com/watch?v=G1GitpVlK3Q" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+                <div class="video-container">
+                    <video width="1280" height="720" controls autoplay poster="THUMBNAIL_URL">
+                        <source id="video-source" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="v-tags">
+                        <a href="#">#Trending</a>
+                        <a href="#">#Top10</a>
+                    </div>
+                    <h3>Code with Prathamesh Kulkarni</h3>
+<div class="play-info">
+    <p>5K views &bull; 1 day ago</p>
+    <div class="tool_icons">
+       <span> <i class="fa-solid fa-thumbs-up"></i>2k</span>
+        <span><i class="fa-solid fa-thumbs-down"></i>159</span>
+        <span><i class="fa-solid fa-share"></i>Share</span>
+        <span><i class="fa-solid fa-bookmark"></i>Share</span>
+    </div>
+</div>
+                </div>
+            </div>
+            <div class="right_sidebar">
+                <div class="side_list">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./video.js" async defer></script>
+</body>
+
+</html>
