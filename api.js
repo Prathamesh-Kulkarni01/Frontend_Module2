@@ -36,7 +36,7 @@ const getChannelIcon=(video_data,card)=>{
 
 const makeVideoCard=(data,card)=>{
     console.log(data)
-card.innerHTML+=`
+    videoCardContainer.innerHTML+=`
 <div class="video">
 <a href='/video.html?${data.id}'>
     <img class="thumbnail"
